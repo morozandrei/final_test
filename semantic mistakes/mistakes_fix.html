@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mistakes Fix</title>
+    <script src="https://kit.fontawesome.com/1ac7c86d48.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: cornsilk;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            margin: 30px;
+        }
+        header h1 {
+            color: greenyellow;
+        }
+        header h2 {
+            color: orangered;
+        }
+        main {
+            margin: 30px;
+            padding-top: 20px;
+        }
+        article h2, h3, p {
+            color: blue;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        .menu {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: greenyellow;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: -2px;
+        }
+        a {
+            text-decoration: none;
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: cornsilk;
+        }
+        .fas, .fab {
+            transform: translateY(15px) translateX(50px);
+            font-size: 20px;
+        }
+        span {
+            display: inline-block;
+            transform: translateY(15px) translateX(60px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!--т.к. в задании было разрешено изменрить код,
+            то при настоящей структуре документа логично было прописать 
+            данные микроформаты разделу 'main'-->
+        <h1>
+            Проверь свои знания HTML и CSS.
+        </h1>
+        <h2>
+            Найди ошибки в коде, исправь их, а так же подумай как можно улучшить код.
+        </h2>
+    </header>
+    
+    <main itemscope itemtype="http://schema.org/Article">
+        <article itemprop="articleBody">
+            
+            <h2 itemprop="headline">
+                Теги HTML
+            </h2>
+            
+            <section itemprop="articleSection">
+                <h3 itemprop="name">Добавление картинок.</h3>
+                <p itemprop="description">
+                    Тег &lt;img src="url" alt="name"&gt; используется для добавления картинки. Например:<br>
+                    <!-- размер изображения 200px -->
+                    <img src="images/home.png" itemprop="image" alt="image"><br>
+                </p>
+            </section>
+            
+            <section>
+                <h3>Заголовки</h3>
+                <p> <!--для отображения кода html на странице нужно использовать 
+                        спецсимволы &lt; и &gt; вместо угловых скобок '<' и '>' -->
+                    Тег &lt;h1&gt; представляет собой заголовок, так же
+                    как и &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;.
+                </p>
+            </section>
+            
+            <section>
+                <h3>Выделение текста.</h3>
+                <p>
+                   Это пример <strong>выделенного текста</strong>.
+                   Тег &lt;b&gt; и &lt;strong&gt; эквивалентны.
+                </p>
+            </section>
+        
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul class="menu">
+                <!--улучшение кода!!! подлючил библиотеку с иконками :)))-->
+                <a href="#"><i class="fas fa-home"></i><span>HOME</span></a>
+                <a href="#"><i class="fas fa-envelope"></i><span>MAIL</span></a>
+                <a href="#"><i class="fab fa-html5"></i><span>HTML5</span></a>
+                <a href="#"><i class="fab fa-css3"></i><span>CSS3</span></a>
+                <a href="#"><i class="fas fa-cogs"></i><span>SETTINGS</span></a>
+            </ul>
+        </nav>
+    </footer>
+    
+</body>
+</html>

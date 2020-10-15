@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logo Hello Test</title>
+    <style>
+        .container {
+            margin-left: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container h1 {
+            font-size: 8em;
+            margin: 0;
+            margin-left: 90px;
+            border-bottom: 20px solid black;
+            display: inline-block;
+        }
+        .container h1>span {
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 45px;
+            left: 80px;
+            border-left: 20px solid black;
+            height: 130px;
+        }
+        .container h1::before {
+            content: "";
+            position: absolute;
+            top: 70px;
+            left: 50px;
+            border-left: 20px solid black;
+            height:105px;
+        }
+        .container h1>span::before {
+            content: "";
+            position: absolute;
+            top: 90px;
+            left: 20px;
+            border-left: 20px solid black;
+            height: 85px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello <span>test</span></h1>
+    </div>
+    
+</body>
+</html>
